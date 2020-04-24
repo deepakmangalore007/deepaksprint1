@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        PROJECT_ID = 'deepasprint1'
+        PROJECT_ID = 'deepaksprint1'
         CLUSTER_NAME = 'cluster-k9s'
         LOCATION = 'us-central1-c'
         CREDENTIALS_ID = 'k9'
@@ -27,7 +27,7 @@ pipeline {
         stage("Build image") {
             steps {
                 script {
-                    myapp = docker.build("deepasprint1/k9s:${env.BUILD_ID}")
+                    myapp = docker.build("deepaksprint1/k9s:${env.BUILD_ID}")
                 }
             }
         }
